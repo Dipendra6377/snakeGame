@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.body {
+  background: url("img/snakebg2.png");
+  min-height: 100vh;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#board {
+  background: transparent;
+  width: 90vmin;
+  height: 92vmin;
+  border: 4px solid black;
+  display: grid;
+  grid-template-rows: repeat(18, 1fr);
+  grid-template-columns: repeat(18, 1fr);
+}
+.head {
+  background: linear-gradient(red, orange);
+  border: 2px solid white;
+  transform: scale(1.12);
+  border-radius: 40%;
+}
+#scorebox {
+  position: absolute;
+  top: 65px;
+  right: 150px;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+#hiscoreBox {
+  position: absolute;
+  top: 105px;
+  right: 150px;
+  font-size: 38px;
+  font-weight: bold;
+}
+#lvl {
+  position: absolute;
+  top: 155px;
+  right: 150px;
+  font-size: 38px;
+  font-weight: bold;
+}
+.tail {
+  background: purple;
+  border: 0.2vmin solid white;
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+.food {
+  background: linear-gradient(purple, red);
+  border: 0.25vmin solid white;
+  border-radius: 50%;
+  transform: scale(0.8);
+}
+#demo {
+  position: absolute;
+  color: black;
+  font-weight: bold;
+  font-size: 35px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  top: 50%;
+  left: 30%;
+  animation: rainbow 600ms;
+  animation-iteration-count: infinite;
+}
+@keyframes rainbow {
+  0% {
+    color: red;
+  }
+  15% {
+    color: orange;
+  }
+  30% {
+    color: yellow;
+  }
+  45% {
+    color: green;
+  }
+  60% {
+    color: blue;
+  }
+  75% {
+    color: indigo;
+  }
+  90% {
+    color: violet;
+  }
+}
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
